@@ -8,23 +8,23 @@ class GiphyCalculator extends Component {
             <div>
                 <GiphyDisplay />
                 <div className="calculator">
-                    <GiphyKey />
-                    <GiphyKey />
-                    <GiphyKey />
-                    <GiphyKey />
-                    <GiphyKey />
-                    <GiphyKey />
-                    <GiphyKey />
-                    <GiphyKey />
-                    <GiphyKey />
-                    <GiphyKey />
-                    <GiphyKey />
-                    <GiphyKey />
-                    <GiphyKey />
-                    <GiphyKey />
-                    <GiphyKey />
-                    <GiphyKey />
-                    <GiphyKey />
+                    <GiphyKey className="" />
+                    <GiphyKey className="" />
+                    <GiphyKey className="" />
+                    <GiphyKey className="" />
+                    <GiphyKey className="" />
+                    <GiphyKey className="" />
+                    <GiphyKey className="" />
+                    <GiphyKey className="" />
+                    <GiphyKey className="" />
+                    <GiphyKey className="" />
+                    <GiphyKey className="" />
+                    <GiphyKey className="" />
+                    <GiphyKey className="" />
+                    <GiphyKey className="" />
+                    <GiphyKey className="" />
+                    <GiphyKey className="" />
+                    <GiphyKey className="" />
                 </div>
             </div>
         );
