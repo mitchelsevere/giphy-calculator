@@ -2,7 +2,7 @@ import React from 'react';
 
 const GiphyKey = (props) => (
     <div>
-        <span>{props.name}</span>
+        <span>{props.text}</span>
     </div>
 );
 
