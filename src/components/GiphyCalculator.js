@@ -19,30 +19,30 @@ class GiphyCalculator extends Component {
                 <GiphyDisplay display={this.updateDisplay}/>
                 <div className="calculator__keys">
                     <div className="calculator__key">
-                        <GiphyKey className="calculator__key--small" text="clear"/>
-                        <GiphyKey className="calculator__key--med" text="seven"/>
-                        <GiphyKey className="calculator__key--small" text="four"/>
-                        <GiphyKey className="calculator__key--small" text="one"/>
-                        <GiphyKey className="calculator__key--small" text="zero"/>
+                        <GiphyKey className="calculator__key--small" text="clear" value=""/>
+                        <GiphyKey className="calculator__key--med" text="seven" value="7"/>
+                        <GiphyKey className="calculator__key--small" text="four" value="4"/>
+                        <GiphyKey className="calculator__key--small" text="one" value="1"/>
+                        <GiphyKey className="calculator__key--small" text="zero" value="0"/>
                     </div>
                     <div className="calculator__key">
-                        <GiphyKey className="calculator__key--small" text="percent"/>
-                        <GiphyKey className="calculator__key--small" text="eight"/>
-                        <GiphyKey className="calculator__key--med" text="five"/>
-                        <GiphyKey className="calculator__key--small" text="two"/>
+                        <GiphyKey className="calculator__key--small" text="percent" value="%"/>
+                        <GiphyKey className="calculator__key--small" text="eight" value="8"/>
+                        <GiphyKey className="calculator__key--med" text="five" value="5"/>
+                        <GiphyKey className="calculator__key--small" text="two" value="2"/>
                     </div>
                     <div className="calculator_key">
-                        <GiphyKey className="calculator__key--med" text="nine"/>
-                        <GiphyKey className="calculator__key--big" text="six"/>
-                        <GiphyKey className="calculator__key--small" text="three"/>
-                        <GiphyKey className="calculator__key--small" text="decimal"/>
+                        <GiphyKey className="calculator__key--med" text="nine" value="9"/>
+                        <GiphyKey className="calculator__key--big" text="six" value="6"/>
+                        <GiphyKey className="calculator__key--small" text="three" value="3"/>
+                        <GiphyKey className="calculator__key--small" text="decimal" value="."/>
                     </div>
                     <div className="calculator__key">
-                        <GiphyKey className="calculator__key--small" text="divide"/>
-                        <GiphyKey className="calculator__key--small" text="multiply"/>
-                        <GiphyKey className="calculator__key--small" text="minus"/>
-                        <GiphyKey className="calculator__key--small" text="plus"/>
-                        <GiphyKey className="calculator__key--med" text="equal"/>
+                        <GiphyKey className="calculator__key--small" text="divide" value="/"/>
+                        <GiphyKey className="calculator__key--small" text="multiply" value="*"/>
+                        <GiphyKey className="calculator__key--small" text="minus" value="-"/>
+                        <GiphyKey className="calculator__key--small" text="plus" value="+"/>
+                        <GiphyKey className="calculator__key--med" text="equal" value="="/>
                     </div>
                 </div>
             </div>
