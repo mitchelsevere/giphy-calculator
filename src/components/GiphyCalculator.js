@@ -8,41 +8,47 @@ class GiphyCalculator extends Component {
         this.state = { display: 0 }
     }
 
-    updateDisplay = () => {
-        this.setState((prevState) => {
-            // display: prevState.display
-        })
+    handleInputDigits = (e) => {
+        const input = parseInt(e.target.getAttribute('value')) || e.target.getAttribute('value');
+        if (this.state.display === 0) {
+            this.setState(() => ({ display: input}));
+        } else if (input !== 'number'){
+            console.log(typeof input);
+            this.setState((prevState) => ({ display: prevState.display += input }));
+        } else {
+            return;
+        }
     }
     render() {
         return (
-            <div className="calculator">
-                <GiphyDisplay display={this.updateDisplay}/>
-                <div className="calculator__keys">
-                    <div className="calculator__key">
-                        <GiphyKey className="calculator__key--small" text="clear" value=""/>
-                        <GiphyKey className="calculator__key--med" text="seven" value="7"/>
-                        <GiphyKey className="calculator__key--small" text="four" value="4"/>
-                        <GiphyKey className="calculator__key--small" text="one" value="1"/>
-                        <GiphyKey className="calculator__key--small" text="zero" value="0"/>
+            <div className="calc">
+                <GiphyDisplay display={this.state.display}/>
+                <div className="container">
+                    <div className="calc__keys" onClick={this.handleInputDigits}>
+                        <GiphyKey className="calc__key--small" text="clear" value=""/>
+                        <GiphyKey className="calc__key--med" text="seven" value="7"/>
+                        <GiphyKey className="calc__key--small" text="four" value="4"/>
+                        <GiphyKey className="calc__key--small" text="one" value="1"/>
+                        <GiphyKey className="calc__key--small" text="zero" value="0"/>
                     </div>
-                    <div className="calculator__key">
-                        <GiphyKey className="calculator__key--small" text="percent" value="%"/>
-                        <GiphyKey className="calculator__key--small" text="eight" value="8"/>
-                        <GiphyKey className="calculator__key--med" text="five" value="5"/>
-                        <GiphyKey className="calculator__key--small" text="two" value="2"/>
+                    <div className="calc__keys" onClick={this.handleInputDigits}>
+                        <GiphyKey className="calc__key--small" text="percent" value="%"/>
+                        <GiphyKey className="calc__key--small" text="eight" value="8"/>
+                        <GiphyKey className="calc__key--med" text="five" value="5"/>
+                        <GiphyKey className="calc__key--small" text="two" value="2"/>
                     </div>
-                    <div className="calculator_key">
-                        <GiphyKey className="calculator__key--med" text="nine" value="9"/>
-                        <GiphyKey className="calculator__key--big" text="six" value="6"/>
-                        <GiphyKey className="calculator__key--small" text="three" value="3"/>
-                        <GiphyKey className="calculator__key--small" text="decimal" value="."/>
+                    <div className="calc__keys" onClick={this.handleInputDigits}>
+                        <GiphyKey className="calc__key--med" text="nine" value="9"/>
+                        <GiphyKey className="calc__key--big" text="six" value="6"/>
+                        <GiphyKey className="calc__key--small" text="three" value="3"/>
+                        <GiphyKey className="calc__key--small" text="decimal" value="."/>
                     </div>
-                    <div className="calculator__key">
-                        <GiphyKey className="calculator__key--small" text="divide" value="/"/>
-                        <GiphyKey className="calculator__key--small" text="multiply" value="*"/>
-                        <GiphyKey className="calculator__key--small" text="minus" value="-"/>
-                        <GiphyKey className="calculator__key--small" text="plus" value="+"/>
-                        <GiphyKey className="calculator__key--med" text="equal" value="="/>
+                    <div className="calc__keys" onClick={this.handleInputDigits}>
+                        <GiphyKey className="calc__key--small" text="divide" value="/"/>
+                        <GiphyKey className="calc__key--small" text="multiply" value="*"/>
+                        <GiphyKey className="calc__key--small" text="minus" value="-"/>
+                        <GiphyKey className="calc__key--small" text="plus" value="+"/>
+                        <GiphyKey className="calc__key--med" text="equal" value="="/>
                     </div>
                 </div>
             </div>

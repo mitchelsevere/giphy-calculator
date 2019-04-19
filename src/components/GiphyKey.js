@@ -1,9 +1,7 @@
 import React from 'react';
 
 const GiphyKey = (props) => (
-    <div>
-        <span>{props.text}</span>
-    </div>
+    <span value={props.value}>{props.text}</span>
 );
 
 export default GiphyKey;
